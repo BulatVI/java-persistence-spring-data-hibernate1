@@ -13,7 +13,26 @@ enhanced-sequence, как показано в этом разделе. Это п
 
 ch05/mapping - добавление CE_ ко всем таблицам - настройка стратегии
 
-ch06/mapping-value-types Как сделать встроенный клас, как сделать енум, как сделать время
-ch06/mapping-value-types2 как сделать собсвенный конвертер JPA
+ch06/mapping-value-types  - Как сделать встроенный клас, как сделать енум, как сделать время
+ch06/mapping-value-types2 - как сделать собсвенный конвертер JPA
 ch06/mapping-value-types3 - конвертер, определяющий длину строки
+ch06/mapping-value-types4 - сложный конвертер, все плохо понятно
+
+Ch07 - раздел наследование:
+Ch07/mapping-inheritance-mappedsuperclass - Одна таблица для каждого конкретного класса и неявный полиморфизм
+ch07/mapping-inheritance-tableperclass - Одна таблица для каждого конкретного класса с объединениями
+ch07/mapping-inheritance-singletable - Единая таблица для целой иерархии классов
+ch07/mapping-inheritance-singletableformula - Единая таблица для целой иерархии классов с формулой для устаревших схемах
+Ch07/mapping-inheritance-joined - Одна таблица для каждого подкласса с использованием соединений
+Ch07/mapping-inheritance-mixed - Смешение стратегий отображения наследования
+Ch07/mapping-inheritance-embeddable - Наследование и встраиваемые классы
+Ch07/mapping-inheritance-manytoone -  Полиморфная ассоциация многие к одному (many-to-one)
+Ch07/mapping-inheritance-onetomany - Полиморфные коллекции
+
+ГЛАВА 8
+Отображение объектов и связей м\у сущностями
+Ch08/mapping-collections - 
+
+
+
 
