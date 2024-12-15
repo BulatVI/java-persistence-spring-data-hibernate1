@@ -1,4 +1,3 @@
- 
 package com.manning.javapersistence.ch10;
 
 import org.hibernate.LazyInitializationException;
@@ -16,10 +15,9 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SimpleTransitionsTest {
+class SimpleTransitionsTest {
     private static EntityManagerFactory emf =
             Persistence.createEntityManagerFactory("ch10");
 
@@ -27,7 +25,7 @@ public class SimpleTransitionsTest {
             Persistence.createEntityManagerFactory("ch10_replicate");
 
     @Test
-    public void makePersistent() {
+    void makePersistent() {
         EntityManager em = emf.createEntityManager(); // Application-managed
 
         em.getTransaction().begin();
@@ -49,7 +47,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void retrievePersistent() throws Exception {
+    void retrievePersistent() throws Exception {
         EntityManager em = emf.createEntityManager(); // Application-managed
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -93,7 +91,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void retrievePersistentReference() {
+    void retrievePersistentReference() {
         EntityManager em = emf.createEntityManager(); // Application-managed
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -151,7 +149,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void makeTransient() {
+    void makeTransient() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -215,7 +213,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void refresh() throws ExecutionException, InterruptedException {
+    void refresh() throws ExecutionException, InterruptedException {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -262,7 +260,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void replicate() {
+    void replicate() {
         Long ITEM_ID;
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -291,7 +289,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void flushModeType() {
+    void flushModeType() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -321,7 +319,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void scopeOfIdentity() {
+    void scopeOfIdentity() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Item someItem = new Item();
@@ -364,7 +362,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void detach() {
+    void detach() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
@@ -388,7 +386,7 @@ public class SimpleTransitionsTest {
     }
 
     @Test
-    public void mergeDetached() {
+    void mergeDetached() {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
@@ -417,7 +415,7 @@ public class SimpleTransitionsTest {
         em = emf.createEntityManager();
         em.getTransaction().begin();
         User user = em.find(User.class, USER_ID);
-        assertEquals(user.getUsername(), "doejohn");
+        assertEquals("doejohn", user.getUsername());
         em.getTransaction().commit();
         em.close();
     }

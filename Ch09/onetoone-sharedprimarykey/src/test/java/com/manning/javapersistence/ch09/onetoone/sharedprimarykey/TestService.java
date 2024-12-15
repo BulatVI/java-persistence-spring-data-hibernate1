@@ -21,8 +21,7 @@ public class TestService {
     @Transactional
     public void storeLoadEntities() {
 
-        Address address =
-                new Address("Flowers Street", "01246", "Boston");
+        Address address = new Address("Flowers Street", "01246", "Boston");
         addressRepository.save(address);
 
         User john = new User(address.getId(), // Assign same identifier value

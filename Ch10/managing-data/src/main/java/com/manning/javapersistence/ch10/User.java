@@ -1,4 +1,3 @@
- 
 package com.manning.javapersistence.ch10;
 
 import javax.persistence.*;

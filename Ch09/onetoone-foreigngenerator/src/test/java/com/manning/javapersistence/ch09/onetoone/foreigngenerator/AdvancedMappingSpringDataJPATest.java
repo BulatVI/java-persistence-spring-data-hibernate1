@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {SpringDataConfiguration.class})
-public class AdvancedMappingSpringDataJPATest {
+class AdvancedMappingSpringDataJPATest {
 
     @Autowired
     private UserRepository userRepository;
